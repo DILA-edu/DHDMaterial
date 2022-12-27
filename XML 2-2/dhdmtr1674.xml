@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="dhd.rnc" type="application/relax-ng-compact-syntax"?>
-<text id="dhdmtr1674">
-<使用方法><施咒法><手印  t="舞印">次以二手作金剛拳。先虛心合掌後如舞勢。此名曰舞印。</手印>即誦密言曰。</施咒法></使用方法>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="dhd.rnc" type="application/relax-ng-compact-syntax"?><text id="dhdmtr1674" source="T1126">
+<使用方法><施咒法><手印 t="舞印">次以二手作金剛拳。先虛心合掌後如舞勢。此名曰舞印。</手印>即誦密言曰。</施咒法></使用方法>
 
 <咒語>唵(引)嚩日囉(二合)涅里(二合)帝也(二合)</咒語></text>

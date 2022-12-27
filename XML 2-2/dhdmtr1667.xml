@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="dhd.rnc" type="application/relax-ng-compact-syntax"?>
-<text id="dhdmtr1667">
-<使用方法><施咒法>不改前印相。<手印  t="金剛蓮華印">以二中指如蓮葉。名金剛蓮華印。此印安於喉。</手印>即誦密言曰。</施咒法></使用方法>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="dhd.rnc" type="application/relax-ng-compact-syntax"?><text id="dhdmtr1667" source="T1126">
+<使用方法><施咒法>不改前印相。<手印 t="金剛蓮華印">以二中指如蓮葉。名金剛蓮華印。此印安於喉。</手印>即誦密言曰。</施咒法></使用方法>
 
 <咒語>唵(引)達哩摩(二合)嚩日哩(二合)阿地底瑟姹(二合)娑嚩(二合)𤚥</咒語></text>
-
