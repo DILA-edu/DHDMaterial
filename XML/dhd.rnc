@@ -5,7 +5,10 @@ lb = element lb { empty }
 text_like = text | lb
 
 咒名 = element 咒名 { text_like }
-咒語 = element 咒語 { text_like }
+咒語 = element 咒語 {
+  text_like,
+  attribute source { text }?
+}
 方法名稱 = element 方法名稱 { text_like }
 時間 = element 時間 { 
   text_like,
@@ -23,7 +26,10 @@ text_like = text | lb
 症狀 = element 症狀 { 
   text_like,
   attribute t { text }?,
-  attribute r { text }?
+  (
+    (attribute r { "邪魅病" } & attribute rg { text }) 
+    | attribute r { "蟲毒害" }?
+  ) 
 } 
 聽咒者 = element 聽咒者 { text_like }
 說咒者 = element 說咒者 { text_like }
@@ -33,7 +39,7 @@ text_like = text | lb
 }
 
 施咒法 = element 施咒法 {
-  ( text_like | 時間 | 手印 | 物品 | 功效 | 症狀 | 益處 )* 
+  ( text_like | 時間 | 手印 | 物品 | 功效 | 症狀 | 益處 | 咒名 )* 
 }
 
 使用方法 = element 使用方法 { 
