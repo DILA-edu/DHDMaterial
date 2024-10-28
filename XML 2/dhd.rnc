@@ -1,0 +1,69 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+lb = element lb { empty }
+
+text_like = text | lb
+
+咒名 = element 咒名 { text_like }
+咒語 = element 咒語 {
+  text_like,
+  attribute source { text }?
+}
+方法名稱 = element 方法名稱 { text_like }
+時間 = element 時間 { 
+  text_like,
+  attribute t { text }?
+} 
+手印 = element 手印 { 
+  text_like,
+  attribute t { text }?
+} 
+物品 = element 物品 { text_like }
+益處 = element 益處 { 
+  text_like,
+  attribute t { text }?
+}
+症狀 = element 症狀 { 
+  text_like,
+  attribute t { text }?,
+  (
+    (attribute r { "邪魅病" } & attribute rg { text }) 
+    | attribute r { "蟲毒害" }?
+  ) 
+} 
+聽咒者 = element 聽咒者 { text_like }
+說咒者 = element 說咒者 { text_like }
+
+功效 = element 功效 {
+  ( text_like | 施咒法 | 症狀 | 益處 )* 
+}
+
+施咒法 = element 施咒法 {
+  ( text_like | 時間 | 手印 | 物品 | 功效 | 症狀 | 益處 | 咒名 )*,
+  attribute 治療方法 { text }?
+}
+
+使用方法 = element 使用方法 { 
+  ( text_like | 方法名稱 | 說咒者 | 施咒法 | 聽咒者 | 功效 )*
+}
+
+p = element p { 
+  ( text | 咒名 | 咒語 | 使用方法 | 方法名稱 | 說咒者 | 聽咒者 | 施咒法 | 時間 | 手印 | 物品 | 功效 | 症狀 |益處 )*
+}
+
+start = element text {
+  (
+    咒名
+    | 咒語
+    | 聽咒者
+    | 說咒者
+    | 使用方法
+    | 施咒法
+    | 方法名稱
+    | 功效
+    | p
+    | text
+  )*,
+  attribute id { text },
+  attribute source { text }
+}
