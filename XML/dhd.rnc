@@ -39,7 +39,8 @@ text_like = text | lb
 }
 
 施咒法 = element 施咒法 {
-  ( text_like | 時間 | 手印 | 物品 | 功效 | 症狀 | 益處 | 咒名 )* 
+  ( text_like | 時間 | 手印 | 物品 | 功效 | 症狀 | 益處 | 咒名 )*,
+  attribute 治療方法 { text }?
 }
 
 使用方法 = element 使用方法 { 
